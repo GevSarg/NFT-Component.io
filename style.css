@@ -1,0 +1,129 @@
+/* --Fonts-- */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@500&family=Montserrat:wght@500&family=Outfit:wght@300;400;600&family=Red+Hat+Display:wght@500&family=Schibsted+Grotesk&display=swap");
+
+/* --Reset-- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit";
+}
+/* --Pointer-- */
+.pointer {
+  cursor: pointer;
+}
+/* --Background-- */
+body {
+  background-color: hsl(217, 54%, 11%);
+}
+
+/* --Card Design-- */
+.card {
+  box-shadow: 0px 15px 0px 20px #0c1729;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  background-color: hsl(216, 50%, 16%);
+  padding: 25px;
+}
+.img-box {
+  width: 100%;
+  position: relative;
+}
+.eth-img {
+  border-radius: 15px;
+  overflow: hidden;
+}
+.eth-img img {
+  width: 100%;
+}
+.title {
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.desc {
+  color: hsl(215, 51%, 70%);
+}
+.info-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-box p {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.info-box img {
+  margin-right: 8px;
+}
+.eth {
+  color: #08fcfc;
+}
+.days {
+  color: #90acdc;
+}
+.line {
+  width: 100%;
+  border: 1px solid hsl(215, 32%, 27%);
+  margin-bottom: 20px;
+}
+.creator-box {
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+}
+.creator-box p {
+  color: #90acdc;
+}
+.creator-box span {
+  color: hsl(210, 2%, 81%);
+}
+.avatar img {
+  width: 100%;
+  display: block;
+}
+.avatar {
+  margin-right: 15px;
+  border-radius: 50%;
+  border: 1.5px solid white;
+  width: 30px;
+}
+
+.creator-box span:hover,
+.title:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+/* --Mobile Design-- */
+@media (max-width: 400px) {
+  .card {
+    max-width: 90%;
+  }
+}
+
+/* --Overlay Image-- */
+.overlay-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.overlay-img {
+  transition: 0.4s ease-in-out;
+  border-radius: 15px;
+  opacity: 0;
+  z-index: 10;
+  position: absolute;
+  background-color: hsl(178, 100%, 50%);
+  width: 100%;
+  height: 100%;
+}
+.img-box:hover .overlay-img {
+  opacity: 0.5;
+}
